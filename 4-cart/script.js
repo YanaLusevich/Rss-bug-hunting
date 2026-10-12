@@ -32,10 +32,13 @@ function renderProducts() {
 
 function addToCart(id) {
   const product = products.find((p) => p.id === id);
-  if (!product) {
-    return;
+  const item = cart.find((i) => i.id === id);
+  if (item) {
+    item.qty++;
+  } else {
+    cart.push({ id: product.id, name: product.name, price: product.price, qty: 1 });
   }
-  cart.push({ id: product.id, name: product.name, price: product.price, qty: 1 });
+  
   renderCart();
 }
 
