@@ -49,7 +49,7 @@ function render() {
     grid.appendChild(card);
   });
 
-  countEl.textContent = products.length;
+  countEl.textContent = items.length;
 }
 
 render();
