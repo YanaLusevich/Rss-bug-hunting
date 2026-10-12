@@ -40,6 +40,7 @@ function getFiltered() {
 }
 
 function render() {
+  grid.innerHTML = '';
   const items = getFiltered();
   items.forEach((p) => {
     const card = document.createElement("div");
@@ -47,6 +48,7 @@ function render() {
     card.innerHTML = `<h3>${p.name}</h3><p class="cat">${p.category}</p><p class="price">$${p.price}</p>`;
     grid.appendChild(card);
   });
+
   countEl.textContent = products.length;
 }
 
