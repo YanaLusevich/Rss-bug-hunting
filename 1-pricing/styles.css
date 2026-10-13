@@ -62,12 +62,6 @@ body {
   margin-bottom: 12px;
 }
 
-.plan__name::before {
-  content: "✓";
-  color: green;
-  margin-right: 8px;
-}
-
 .price {
   font-size: 40px;
   font-weight: 700;
@@ -88,15 +82,15 @@ body {
 }
 
 .features li {
-  padding: 0;
+  padding: 6px 0;
   margin-bottom: 8px;
 }
 
 .features li::before {
-  content: "";
+  content: "✓";
   color: #22c55e;
   font-weight: 700;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
 .btn {
